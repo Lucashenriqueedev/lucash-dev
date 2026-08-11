@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tabuleiro {
+    width: 400px;
+    margin: 0 auto;
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.casa {
+    width: 50px;
+    height: 50px;
+    background-color:  white;
+    border: 1px solid black;
+}
+
+.preto {
+    background: black;
+}
+
+h1{
+    text-align: center;
+}
+body{
+    background-color: white;
+}
