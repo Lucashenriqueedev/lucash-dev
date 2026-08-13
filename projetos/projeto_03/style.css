@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgoldenrod;
+}
+
+.container{
+    padding: 40px;
+    border-radius: 20px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.btnFrase{
+    background-color: aqua;
+    color: darkviolet;
+    border: solid gray;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btnFrase:hover{
+    background-color: chocolate;
+}
+
+h1{
+    color: springgreen;
+}
+
+p{
+    color: hotpink;
+}
