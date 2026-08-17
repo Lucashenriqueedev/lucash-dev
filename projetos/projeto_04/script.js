@@ -16,8 +16,7 @@ function verificar() {
         if(input[i] == senhaCorreta[i]){
             number.classList.add("certo");
         }else{
-            number.classList.add("errado")
-        }
-
-    }
+        number.classList.add("errado")
+     }
+  }
 }
