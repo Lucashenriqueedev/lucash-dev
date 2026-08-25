@@ -1,3 +1,7 @@
+lpBtnEnviar.addEventListener("click", function()){
+    modal.classList.add("is-active");
+}
+
 let tarefas = [];
 let contadorId = 0;
 
