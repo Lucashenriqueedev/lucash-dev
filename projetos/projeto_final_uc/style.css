@@ -10,9 +10,6 @@ body {
     min-height: 100vh;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -40,7 +37,6 @@ header {
     margin-top: 35px;
 }
 
-/* PAINEL (Ajustado para não cortar nem gerar barra de rolagem) */
 .lpPainel {
     width: auto;
     max-width: 250px;
@@ -112,9 +108,6 @@ header {
     color: #238E4B;
 }
 
-/* =========================
-   MAIN / TABULEIRO (CENTRALIZADO)
-========================= */
 main {
     background-color: #0A1B2D;
     min-height: calc(100vh - 180px);
@@ -130,7 +123,6 @@ main {
     align-items: center;
 }
 
-/* Borda do container estilo modal/painel */
 .lpBorda {
     display: flex;
     flex-direction: column;
@@ -160,7 +152,6 @@ main {
     color: #5D5D5D;
 }
 
-/* Botão Enviar 100% de largura */
 .lpBtnEnviar {
     background-color: #1e2c3a;
     border: 1px solid #06111F;
@@ -181,7 +172,6 @@ main {
     color: white;
 }
 
-/* Linhas e Quadradinhos das Letras */
 .lpSenha {
     display: flex;
     flex-direction: row;
@@ -204,7 +194,7 @@ main {
     text-transform: uppercase;
 }
 
-/* Cores das Letras */
+
 .lpVerde {
     background-color: #16a34a;
     border-color: #16a34a;
@@ -303,9 +293,6 @@ main {
     transform: scale(1.1);
 }
 
-/* =========================
-   RESPONSIVO (CELULAR)
-========================= */
 @media (max-width: 600px) {
     header {
         height: 150px;
