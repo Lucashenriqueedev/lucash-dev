@@ -1,4 +1,6 @@
-const palavraSecreta = "TERMO";
+const palavras = ["TERMO", "AMIGO", "NOITE", "PLANO", "PORTA"];
+
+let palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
 
 const input = document.querySelector(".lpInputSenha");
 const lpBtnEnviar = document.querySelector(".lpBtnEnviar");
@@ -85,6 +87,9 @@ function mostrarResultado(vitoria) {
 }
 
 function reiniciarJogo() {
+    // Sorteia uma nova palavra ao reiniciar
+    palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
+
     tentativaAtual = 0;
     contador.textContent = "0";
     input.value = "";
