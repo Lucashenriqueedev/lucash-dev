@@ -87,7 +87,6 @@ function mostrarResultado(vitoria) {
 }
 
 function reiniciarJogo() {
-    // Sorteia uma nova palavra ao reiniciar
     palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)];
 
     tentativaAtual = 0;
