@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termo</title>
+    <title>Termo Among Us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,43 +12,48 @@
 
     <header>
         <img src="assets/janela.png" alt="" class="lpJanela">
-        <img src="assets/among-09.png" alt=""class="lpAmogus">
-        <div class="lpQuadroTentativas">
+        <img src="assets/among-09.png" alt="Among Us" class="lpAmogus">
 
+        <div class="lpQuadroTentativas">
             <div class="lpQuadro">
                 <h3>TENTATIVAS</h3>
-                <h1><span class="lpTentativas">0</span>/6</h1>
+                <h1>
+                    <span class="lpTentativas">0</span>/6
+                </h1>
             </div>
-
             <p>adivinhe a palavra secreta de 5 letras</p>
-
         </div>
 
         <img src="assets/painel.png" alt="" class="lpPainel">
-        <button class="lpBtnReturn"><img src="assets/return.png" alt="" class="lpImg"></button>
 
+        <button class="lpBtnReturn" type="button">
+            <img src="assets/return.png" alt="Reiniciar" class="lpImg">
+        </button>
     </header>
 
-
     <main>
-
         <div class="lpContainer">
-
             <div class="lpBorda">
-
-                <input
-                    type="text"
-                    placeholder="Acerte a palavra"
-                    maxlength="5"
+                <input 
+                    type="text" 
+                    placeholder="Acerte a palavra" 
+                    maxlength="5" 
                     class="lpInputSenha"
+                    autocomplete="off"
                 >
 
-                <button class="lpBtnEnviar">
+                <button class="lpBtnEnviar" type="button">
                     ENVIAR
                 </button>
 
+                <div class="lpSenha">
+                    <div class="lpDigito"></div>
+                    <div class="lpDigito"></div>
+                    <div class="lpDigito"></div>
+                    <div class="lpDigito"></div>
+                    <div class="lpDigito"></div>
+                </div>
 
-                
                 <div class="lpSenha">
                     <div class="lpDigito"></div>
                     <div class="lpDigito"></div>
@@ -57,7 +63,6 @@
                 </div>
 
 
-                
                 <div class="lpSenha">
                     <div class="lpDigito"></div>
                     <div class="lpDigito"></div>
@@ -67,7 +72,6 @@
                 </div>
 
 
-                
                 <div class="lpSenha">
                     <div class="lpDigito"></div>
                     <div class="lpDigito"></div>
@@ -77,7 +81,6 @@
                 </div>
 
 
-                
                 <div class="lpSenha">
                     <div class="lpDigito"></div>
                     <div class="lpDigito"></div>
@@ -86,8 +89,6 @@
                     <div class="lpDigito"></div>
                 </div>
 
-
-                
                 <div class="lpSenha">
                     <div class="lpDigito"></div>
                     <div class="lpDigito"></div>
@@ -95,47 +96,26 @@
                     <div class="lpDigito"></div>
                     <div class="lpDigito"></div>
                 </div>
-
-
-                
-                <div class="lpSenha">
-                    <div class="lpDigito"></div>
-                    <div class="lpDigito"></div>
-                    <div class="lpDigito"></div>
-                    <div class="lpDigito"></div>
-                    <div class="lpDigito"></div>
-                </div>
-
             </div>
-
         </div>
-
     </main>
 
 
-    
-
     <div class="resultado" id="resultado">
+        <div class="resultadoCaixa">
+            <button id="lpBtnReset" type="button">
+                <img src="assets/return.png" alt="Resetar jogo">
+            </button>
 
-    <div class="resultadoCaixa">
+            <h2 id="resultadoTitulo">Vitória</h2>
 
-        <h2 id="resultadoTitulo"></h2>
+            <img src="assets/among-09.png" alt="Among Us">
 
-        <img src="assets/among-09.png" alt="Among Us">
-
-        <p id="palavraResultado"></p>
-
-        <button id="jogarNovamente">
-            JOGAR NOVAMENTE
-        </button>
-
+            <p id="palavraResultado"></p>
+        </div>
     </div>
 
-</div>
-
-
-
     <script src="script.js"></script>
-
 </body>
+
 </html>

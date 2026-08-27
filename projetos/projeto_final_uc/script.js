@@ -1,20 +1,21 @@
 const palavraSecreta = "TERMO";
 
 const input = document.querySelector(".lpInputSenha");
-const botao = document.querySelector(".lpBtnEnviar");
+const lpBtnEnviar = document.querySelector(".lpBtnEnviar");
 const linhas = document.querySelectorAll(".lpSenha");
 const contador = document.querySelector(".lpTentativas");
 
 const resultado = document.querySelector("#resultado");
 const resultadoCaixa = document.querySelector(".resultadoCaixa");
 const resultadoTitulo = document.querySelector("#resultadoTitulo");
-const btnJogarNovamenteModal = document.querySelector("#jogarNovamente");
-const btnReturnHeader = document.querySelector(".lpBtnReturn");
-const body = document.body;
+const palavraResultado = document.querySelector("#palavraResultado");
+
+const lpBtnReset = document.querySelector("#lpBtnReset");
+const lpBtnReturnHeader = document.querySelector(".lpBtnReturn");
 
 let tentativaAtual = 0;
 
-botao.addEventListener("click", verificar);
+lpBtnEnviar.addEventListener("click", verificar);
 
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -26,10 +27,10 @@ function verificar() {
     if (tentativaAtual >= 6) return;
 
     const tentativa = input.value.toUpperCase();
-    
+
     if (tentativa.length !== 5) {
         alert("Digite uma palavra com 5 letras!");
-        return; 
+        return;
     }
 
     const quadrados = linhas[tentativaAtual].querySelectorAll(".lpDigito");
@@ -43,6 +44,8 @@ function verificar() {
             quadrados[i].classList.add("lpVerde");
         } else if (palavraSecreta.includes(tentativa[i])) {
             quadrados[i].classList.add("lpAmarelo");
+        } else {
+            quadrados[i].classList.add("lpCinza");
         }
     }
 
@@ -67,15 +70,17 @@ function mostrarResultado(vitoria) {
     resultado.style.display = "flex";
 
     if (vitoria) {
-        resultadoTitulo.textContent = "VITÓRIA";
+        resultadoTitulo.textContent = "Vitória";
+        palavraResultado.textContent = "Você acertou a palavra!";
         resultadoCaixa.style.backgroundImage = "url('assets/background-victory.png')";
-        body.classList.add("lpVitoria");
-        body.classList.remove("lpDerrota");
+        resultadoCaixa.classList.add("vitoria");
+        resultadoCaixa.classList.remove("derrota");
     } else {
-        resultadoTitulo.textContent = "DERROTA";
+        resultadoTitulo.textContent = "Derrota";
+        palavraResultado.textContent = "A palavra era: " + palavraSecreta;
         resultadoCaixa.style.backgroundImage = "url('assets/background-defeat.png')";
-        body.classList.add("lpDerrota");
-        body.classList.remove("lpVitoria");
+        resultadoCaixa.classList.add("derrota");
+        resultadoCaixa.classList.remove("vitoria");
     }
 }
 
@@ -84,18 +89,24 @@ function reiniciarJogo() {
     contador.textContent = "0";
     input.value = "";
     input.disabled = false;
-    botao.disabled = false;
-    
+    lpBtnEnviar.disabled = false;
+
     document.querySelectorAll(".lpDigito").forEach(function (quadrado) {
         quadrado.textContent = "";
-        quadrado.classList.remove("lpVerde", "lpAmarelo");
+        quadrado.classList.remove("lpVerde", "lpAmarelo", "lpCinza");
     });
 
     resultado.style.display = "none";
-    body.classList.remove("lpVitoria", "lpDerrota");
+    resultadoCaixa.classList.remove("vitoria", "derrota");
+    resultadoCaixa.style.backgroundImage = "none";
+
+    input.focus();
 }
 
-btnJogarNovamenteModal.addEventListener("click", reiniciarJogo);
-if (btnReturnHeader) {
-    btnReturnHeader.addEventListener("click", reiniciarJogo);
+if (lpBtnReset) {
+    lpBtnReset.addEventListener("click", reiniciarJogo);
+}
+
+if (lpBtnReturnHeader) {
+    lpBtnReturnHeader.addEventListener("click", reiniciarJogo);
 }

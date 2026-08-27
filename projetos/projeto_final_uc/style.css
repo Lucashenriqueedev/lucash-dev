@@ -1,32 +1,124 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-header{
+
+body {
+    background-color: #0A1B2D;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+header {
     display: flex;
     justify-content: space-between;
     background-color: #081728;
     border: 4px solid #081522;
     height: 180px;
+    position: relative;
+    overflow: hidden;
 }
-main{
+
+.lpJanela {
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    left: 25%;
+    margin-top: 20px;
+}
+
+.lpAmogus {
+    width: 100px;
+    height: 150px;
+    z-index: 1;
+    position: absolute;
+    left: 37%;
+    margin-top: 35px;
+}
+
+.lpPainel {
+    width: 250px;
+    height: 240px;
+    z-index: 0;
+    position: absolute;
+    right: 0;
+}
+
+.lpBtnReturn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.lpBtnReturn img {
+    width: 100%;
+    height: 100%;
+}
+
+.lpQuadroTentativas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 16px;
+    position: absolute;
+    left: 46%;
+    color: #9FB5C9;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2;
+}
+
+.lpQuadro {
     background-color: #0A1B2D;
+    border: 4px solid #051222;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
 }
-.lpContainer{
+
+.lpQuadro h3, h3 {
+    color: #9FB5C9;
+    font-weight: 700;
+}
+
+.lpQuadro h1 {
+    color: #2B4056;
+    font-size: 50px;
+}
+
+.lpTentativas {
+    color: #238E4B;
+}
+
+
+main {
+    background-color: #0A1B2D;
+    min-height: calc(100vh - 180px);
+}
+
+.lpContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
 
-}
-.lpSenha{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 7px 0px;
-}
-.lpBorda{
+.lpBorda {
     border: 4px solid #000612;
     display: flex;
     flex-direction: column;
@@ -35,14 +127,50 @@ main{
     border-radius: 10px;
     margin-top: 20px;
 }
-.lpDigito{
+
+.lpSenha {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 7px 0;
+}
+
+.lpDigito {
     width: 50px;
     height: 50px;
     background-color: #06111F;
     border: 3px solid #2B4056;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
-.lpBtnEnviar{
+
+.lpInputSenha {
+    background-color: #06111F;
+    border: 3px solid #2B4056;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0;
+    color: white;
+    outline: none;
+}
+
+.lpInputSenha::placeholder {
+    color: #5D5D5D;
+}
+
+.lpInputSenha:focus {
+    border-color: #00c8ff;
+}
+
+.lpBtnEnviar {
     background-color: #2B4056;
     border: 3px solid #06111F;
     border-radius: 10px;
@@ -51,351 +179,197 @@ main{
     text-align: center;
     font-size: 18px;
     font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
 }
-.lpInputSenha{
-    background-color: #06111F;
-    border: 3px solid #2B4056;
-    padding: 5px 10px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #5D5D5D;
+
+.lpBtnEnviar:hover {
+    background-color: #00c8ff;
+    color: white;
 }
-.lpQuadroTentativas{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: end;
-    font-size: 16px;
-    position: absolute;
-    left: 46%;
-    color: #9FB5C9;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif; 
-    z-index: 2;
-}
-.lpQuadro{
-    background-color: #0A1B2D;
-    border: 4px solid #051222;
-    padding: 20px;
-    margin: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-}
-.lpJanela{
-    width: 300px;
-    height: 130px;
-    position: absolute;
-    left: 25%;
-    margin-top: 20px;
-}
-.lpPainel{
-    width: 250px;
-    height: 240px;
-    z-index: 0;
-    position: absolute;
-    right: 0px;
-}
-h3{
-    color: #9FB5C9;
-    font-weight: bold;
-    font-weight: 700;
-}
-.lpTentativas{
-    color: #238E4B;
-}
-h1{
-    color: #2B4056;
-    font-size: 50px;
-}
-.lpAmogus{
-    width: 100px;
-    height: 150px;
-    z-index: 1;
-    position: absolute;
-    left: 37%;
-    margin-top: 35px;
-}
-footer{
-    background-color: #0A1B2D;
-    padding: 100%;
-}
+
+
 .lpVerde {
     background-color: #16a34a;
     border-color: #16a34a;
+    color: white;
 }
+
 .lpAmarelo {
     background-color: #eab308;
     border-color: #eab308;
+    color: white;
 }
 
 .lpCinza {
     background-color: #4b5563;
     border-color: #4b5563;
-}
-
-.resultado {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 4;
-}
-
-.resultadoCaixa {
-    width: 350px;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-    padding: 30px;
-    background-image: url("assets/background-victory.png");
-    background-size: cover;
-    background-position: center;
-    z-index: 5;
-}
-
-.resultadoCaixa img {
-    width: 100px;
-}
-
-.resultadoCaixa h2 {
-    font-size: 30px;
-    color: #00ffff;
-}
-
-#jogarNovamente {
-    padding: 10px 20px;
-    border: none;
-    background: #00c8ff;
     color: white;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-#jogarNovamente:hover {
-    background: #009dcc;
-}
-/* =========================
-   TELA DE RESULTADO
-========================= */
 
 .resultado {
     position: fixed;
     top: 0;
     left: 0;
-
-    width: 100%;
-    height: 100%;
-
+    width: 100vw;
+    height: 100vh;
     display: none;
-
     align-items: center;
     justify-content: center;
-
-    background: rgba(0, 0, 0, 0.80);
-
-    z-index: 100;
+    background-color: #000;
+    z-index: 1000;
 }
-
-
-/* CAIXA */
 
 .resultadoCaixa {
-
-    width: 350px;
-    min-height: 350px;
-
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
-    gap: 15px;
-
     text-align: center;
-
-    padding: 30px;
-
+    padding: 20px;
     background-size: cover;
     background-position: center;
-
-    border: 4px solid #07111c;
-    border-radius: 15px;
-
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-
-    animation: aparecerResultado 0.3s ease;
+    background-repeat: no-repeat;
 }
-
-
-/* TÍTULO */
 
 #resultadoTitulo {
-
-    margin: 0;
-
+    margin: 0 0 15px 0;
     font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 38px;
-
+    font-size: 55px;
     font-weight: 900;
-
-    text-shadow:
-        3px 3px 0 #000,
-        0 0 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 0 #000, 0 0 10px rgba(0, 0, 0, 0.8);
+    z-index: 2;
 }
-
-
-/* VITÓRIA */
 
 .resultadoCaixa.vitoria #resultadoTitulo {
-
     color: #00d9ff;
-
 }
-
-
-/* DERROTA */
 
 .resultadoCaixa.derrota #resultadoTitulo {
-
     color: #ff1616;
-
 }
-
-
-/* AMONG US */
 
 .resultadoCaixa img {
-
-    width: 100px;
+    width: 160px;
     height: auto;
-
+    object-fit: contain;
+    z-index: 2;
 }
-
-
-/* TEXTO */
 
 #palavraResultado {
-
     color: white;
-
     font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 18px;
-
+    font-size: 22px;
     font-weight: bold;
-
-    margin: 0;
-
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 2;
 }
 
-
-/* BOTÃO */
-
-#jogarNovamente {
-
-    padding: 12px 22px;
-
-    border: 3px solid #06111F;
-
-    border-radius: 10px;
-
-    background: #2B4056;
-
-    color: white;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
+#lpBtnReset {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    border: none;
+    background: transparent;
     cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s;
+}
 
-    transition: 0.2s;
+#lpBtnReset img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 
+#lpBtnReset:hover {
+    transform: scale(1.1);
 }
 
 
-#jogarNovamente:hover {
-
-    background: #00c8ff;
-
-    transform: scale(1.05);
-
-}
-
-
-
-
-@keyframes aparecerResultado {
-
-    from {
-
-        opacity: 0;
-
-        transform: scale(0.7);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: scale(1);
-
-    }
-
-}
-
-
-@media (max-width: 380px) {
-    header{
+@media (max-width: 600px) {
+    header {
         height: 150px;
     }
-    .lpJanela{
+
+    .lpJanela {
         width: 200px;
         height: 100px;
-        margin-top: 30px;
-        left: -50px;
+        left: 0;
+        margin-top: 25px;
     }
-    .lpPainel{
-        z-index: 0;
-        width: 200px;
-        height: 190px;
+
+    .lpAmogus {
+        width: 70px;
+        height: 105px;
+        left: 25%;
+        margin-top: 25px;
     }
-    .lpQuadro{
-        width: 200px;
-        height: 100px;
-        font-size: 18px;
-        padding: 9px;
+
+    .lpPainel {
+        width: 150px;
+        height: 150px;
+        right: -20px;
     }
-    .lpQuadroTentativas{
-        left: 20%;
-        z-index: 1;
+
+    .lpQuadroTentativas {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5px;
     }
-    h3{
+
+    .lpQuadro {
+        padding: 5px 15px;
+    }
+
+    .lpQuadro h3 {
+        font-size: 12px;
+    }
+
+    .lpQuadro h1 {
+        font-size: 28px;
+    }
+
+    .lpQuadroTentativas p {
         font-size: 10px;
     }
-    .lpAmogus{
-        left: 10%;
+
+    .lpBorda {
         margin-top: 15px;
+    }
+
+    .lpInputSenha, .lpBtnEnviar {
+        width: 250px;
+    }
+
+    .lpSenha {
+        gap: 5px;
+        margin: 5px 0;
+    }
+
+    .lpDigito {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    #resultadoTitulo {
+        font-size: 40px;
+    }
+
+    .resultadoCaixa img {
+        width: 120px;
+    }
+
+    #palavraResultado {
+        font-size: 18px;
     }
 }
