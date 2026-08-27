@@ -10,7 +10,9 @@ body {
     min-height: 100vh;
 }
 
-
+/* =========================
+   HEADER
+========================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -38,6 +40,7 @@ header {
     margin-top: 35px;
 }
 
+/* PAINEL (Ajustado para não cortar nem gerar barra de rolagem) */
 .lpPainel {
     width: auto;
     max-width: 250px;
@@ -49,6 +52,7 @@ header {
     right: 0;
     top: 0;
 }
+
 .lpBtnReturn {
     position: absolute;
     left: 20px;
@@ -108,90 +112,99 @@ header {
     color: #238E4B;
 }
 
-
+/* =========================
+   MAIN / TABULEIRO (CENTRALIZADO)
+========================= */
 main {
     background-color: #0A1B2D;
     min-height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
 .lpContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
+/* Borda do container estilo modal/painel */
 .lpBorda {
-    border: 4px solid #000612;
     display: flex;
     flex-direction: column;
     background-color: #081625;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: fit-content;
 }
 
-.lpSenha {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 7px 0;
-}
-
-.lpDigito {
-    width: 50px;
-    height: 50px;
-    background-color: #06111F;
-    border: 3px solid #2B4056;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-}
 
 .lpInputSenha {
     background-color: #06111F;
-    border: 3px solid #2B4056;
-    padding: 5px 10px;
-    border-radius: 10px;
+    border: 2px solid #1f2d3d;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    margin: 5px 0;
+    margin-bottom: 8px;
     color: white;
     outline: none;
+    width: 100%;
 }
 
 .lpInputSenha::placeholder {
     color: #5D5D5D;
 }
 
-.lpInputSenha:focus {
-    border-color: #00c8ff;
-}
-
+/* Botão Enviar 100% de largura */
 .lpBtnEnviar {
-    background-color: #2B4056;
-    border: 3px solid #06111F;
-    border-radius: 10px;
-    color: #081625;
-    padding: 2px 10px;
+    background-color: #1e2c3a;
+    border: 1px solid #06111F;
+    border-radius: 8px;
+    color: #6b8296;
+    padding: 8px 10px;
     text-align: center;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
+    width: 100%;
+    margin-bottom: 12px;
 }
 
 .lpBtnEnviar:hover {
-    background-color: #00c8ff;
+    background-color: #2b3e52;
     color: white;
 }
 
+/* Linhas e Quadradinhos das Letras */
+.lpSenha {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 4px 0;
+}
 
+.lpDigito {
+    width: 45px;
+    height: 45px;
+    background-color: #06111F;
+    border: 2px solid #1a2736;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Cores das Letras */
 .lpVerde {
     background-color: #16a34a;
     border-color: #16a34a;
@@ -209,7 +222,6 @@ main {
     border-color: #4b5563;
     color: white;
 }
-
 
 .resultado {
     position: fixed;
@@ -264,13 +276,7 @@ main {
 }
 
 #palavraResultado {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-    text-shadow: 2px 2px 4px #000;
-    z-index: 2;
+    display: none;
 }
 
 #lpBtnReset {
@@ -297,7 +303,9 @@ main {
     transform: scale(1.1);
 }
 
-
+/* =========================
+   RESPONSIVO (CELULAR)
+========================= */
 @media (max-width: 600px) {
     header {
         height: 150px;
@@ -318,9 +326,8 @@ main {
     }
 
     .lpPainel {
-        width: 150px;
-        height: 150px;
-        right: -20px;
+        max-width: 150px;
+        max-height: 150px;
     }
 
     .lpQuadroTentativas {
@@ -345,23 +352,10 @@ main {
         font-size: 10px;
     }
 
-    .lpBorda {
-        margin-top: 15px;
-    }
-
-    .lpInputSenha, .lpBtnEnviar {
-        width: 250px;
-    }
-
-    .lpSenha {
-        gap: 5px;
-        margin: 5px 0;
-    }
-
     .lpDigito {
-        width: 45px;
-        height: 45px;
-        font-size: 22px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
     }
 
     #resultadoTitulo {
@@ -370,9 +364,5 @@ main {
 
     .resultadoCaixa img {
         width: 120px;
-    }
-
-    #palavraResultado {
-        font-size: 18px;
     }
 }
