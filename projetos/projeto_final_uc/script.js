@@ -71,15 +71,15 @@ function verificar() {
 function mostrarResultado(vitoria) {
     resultado.style.display = "flex";
 
+    palavraResultado.textContent = "";
+
     if (vitoria) {
         resultadoTitulo.textContent = "Vitória";
-        palavraResultado.textContent = "Você acertou a palavra!";
         resultadoCaixa.style.backgroundImage = "url('assets/background-victory.png')";
         resultadoCaixa.classList.add("vitoria");
         resultadoCaixa.classList.remove("derrota");
     } else {
         resultadoTitulo.textContent = "Derrota";
-        palavraResultado.textContent = "A palavra era: " + palavraSecreta;
         resultadoCaixa.style.backgroundImage = "url('assets/background-defeat.png')";
         resultadoCaixa.classList.add("derrota");
         resultadoCaixa.classList.remove("vitoria");
