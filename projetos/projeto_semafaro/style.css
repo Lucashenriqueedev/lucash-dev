@@ -1,0 +1,28 @@
+.first{
+    background-color: red;
+    width:100px;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+    font-weight:700;
+}
+.second{
+    background-color:yellow;
+    width:100px;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+     font-weight:700;
+}
+
+.three{
+    background-color:green;
+    width:100px;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+    font-weight:700;
+}
+p{
+    color:#FFFFFF
+}

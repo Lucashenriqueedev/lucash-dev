@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produtos Gamer</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.favorito{
+    color:#d91c24;
+    font-size:28px;
+    margin-bottom:20px;
+    margin-left:20px;
+}
+
+.produtos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.card{
+    position:relative;
+    text-align:center;
+    padding:20px;
+}
+
+.oferta{
+    position:absolute;
+    top:0;
+    right:30px;
+    background:#39b54a;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.card img{
+    width:170px;
+    height:130px;
+    object-fit:contain;
+    margin-top:20px;
+}
+
+.card h3{
+    margin-top:10px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.card p{
+    color:#444;
+    margin-top:8px;
+    line-height:1.4;
+    min-height:55px;
+}
+
+.avaliacao{
+    margin-top:10px;
+    color:#f4b400;
+}
+
+.avaliacao span{
+    color:#666;
+    font-size:13px;
+}
+
+.preco{
+    font-size:34px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.btn{
+    background:#39b54a;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#2e983c;
+}
+
+@media(max-width:900px){
+    .produtos{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .produtos{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="favorito">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+
+    <div class="produtos">
+
+        <!-- 1 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/179/179386.png">
+            <h3>Notebook Gamer</h3>
+            <p>Notebook de Alta Performance para Jogos</p>
+            <div class="avaliacao">★★★★★ <span>(128 Avaliações)</span></div>
+            <div class="preco">R$ 3.499</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 2 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991606.png">
+            <h3>Headset Bluetooth Gamer</h3>
+            <p>Som Imersivo e Máximo de Conforto para Longas Horas de Jogo</p>
+            <div class="avaliacao">★★★★★ <span>(96 Avaliações)</span></div>
+            <div class="preco">R$ 279,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 3 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/928/928818.png">
+            <h3>Teclado Gamer Pro</h3>
+            <p>Teclado com Retroiluminação RGB e Teclas Mecânicas</p>
+            <div class="avaliacao">★★★★★ <span>(78 Avaliações)</span></div>
+            <div class="preco">R$ 279,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 4 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png">
+            <h3>Cadeira Gamer</h3>
+            <p>Ergonômica com Almofadas para Máximo de Conforto</p>
+            <div class="avaliacao">★★★★★ <span>(87 Avaliações)</span></div>
+            <div class="preco">R$ 799,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 5 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png">
+            <h3>Luminária Ring Light</h3>
+            <p>Iluminação Perfeita para Streams, Vídeos e Fotos</p>
+            <div class="avaliacao">★★★★★ <span>(63 Avaliações)</span></div>
+            <div class="preco">R$ 159,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 6 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/595/595067.png">
+            <h3>Mouse Pad XXL</h3>
+            <p>Superfície Extra Grande para Maior Precisão e Desempenho</p>
+            <div class="avaliacao">★★★★★ <span>(51 Avaliações)</span></div>
+            <div class="preco">R$ 89,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 7 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732042.png">
+            <h3>Mouse Gamer RGB</h3>
+            <p>Sensor Avançado com DPI Ajustável e Iluminação RGB</p>
+            <div class="avaliacao">★★★★★ <span>(112 Avaliações)</span></div>
+            <div class="preco">R$ 129,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 8 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/0/191.png">
+            <h3>Suporte para Smartphone</h3>
+            <p>Ajustável e Dobrável para Celular e Câmeras de Ação</p>
+            <div class="avaliacao">★★★★★ <span>(72 Avaliações)</span></div>
+            <div class="preco">R$ 49,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+        <!-- 9 -->
+        <div class="card">
+            <span class="oferta">Oferta</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png">
+            <h3>Webcam Full HD 1080p</h3>
+            <p>Vídeo em Alta Definição com Microfone Embutido</p>
+            <div class="avaliacao">★★★★★ <span>(64 Avaliações)</span></div>
+            <div class="preco">R$ 199,90</div>
+            <button class="btn">Comprar</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
